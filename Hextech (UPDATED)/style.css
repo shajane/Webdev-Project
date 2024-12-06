@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+
+
+:root{
+    --main-color: red;
+    --white:white;
+    --bg:black;
+    --border:.1rem solid rgba(255,255,255,.3);
+
+}
+*{
+    font-family: 'Oswald', sans-serif;
+    margin:0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    transition: .2s linear;
+
+ }
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+    border-radius: 5rem;
+}
+html::-webkit-scrollbar-thumb{
+    background: white;
+    border-radius: 5rem;
+}
+
+body{
+    background: var(--bg);
+}
+
+section{
+    padding:2rem 7%;
+}
+
+
+/* header & navbar  ------------------------------------------------------------ */
+
+
+.heading{
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+}
+
+.heading span{
+    color: red;
+    text-transform: uppercase;
+}
+
+
+
+.header{
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.5rem 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+}
+
+.header .logo img{
+    height: 6rem;
+}
+
+
+/* navbar  ------------------------------------------------------------ */
+.header .navbar a{
+    margin: 0  2rem;
+    font-size: 2rem;
+    color: white;
+}
+
+.header .navbar a:hover{
+    color:var(--main-color);
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+
+.header .icons div{
+    color: white;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+
+.header .icons div:hover{
+    color: var(--main-color);
+}
+
+
+#menu-btn{
+    display: none;
+}
+
+/* Dropdown container */
+.has-dropdown {
+    position: absolute;
+}
+
+/* Dropdown menu styling */
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    top: 100%;
+    left: 0;
+    min-width: 150px;
+    z-index: 1000;
+}
+.dropdown li {
+    border-bottom: 1px solid #555;
+}
+.dropdown li:last-child {
+    border-bottom: none;
+}
+.dropdown a {
+    display: block;
+    padding: 5px 10px;
+}
+.dropdown a:hover {
+    background-color: #575757;
+}
+
+/* Show dropdown on hover */
+.has-dropdown:hover .dropdown {
+    display: block;
+}
+
+
+
+
+/*
+
+.header .cart-items-container{
+    position: absolute;
+    top: 100%; right: 0;
+    height: calc(100vh - 9.5rem);
+    width: 35rem;
+    background: white;
+    padding: 0 1.5rem;
+}
+
+.header .cart-items-container .cart-item{
+    position: relative;
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.header .cart-item-container .cart-item .fa-times{
+    position: absolute;
+    top: 1rem; right: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: black;
+}
+
+.header .cart-items-container.cart-item.fa-times:hover{
+    color: var(--main-color);
+}
+
+
+
+/* home  ----------------------------------------------------------------*/
+
+.home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content{
+    max-width: 60rem;
+}
+
+.home .content h3{
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: white;
+}
+
+
+
+
+
+
+
+/* about  ---------------------------------------------------------------*/
+
+.about .row{
+    display: flex;
+    align-items: center;
+    background: #2345;
+    flex-wrap: wrap;
+}
+
+.about .row .image{
+    flex: 1 1 100rem;
+}
+
+.about .row .image img{
+    width: 100%;
+}
+
+.about .row .content{
+    flex: 1 1 45rem;
+    padding: 2rem;
+}
+
+.about .row .content h3{
+    font-size: 3rem;
+    color: white;
+}
+
+.about .row .content p{
+    font-size: 1.6rem;
+    color: white;
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+
+.btn1{
+    margin-top: var(--bg);
+    display: inline-block;
+    padding: .9rem 3rem;
+    font-size: 2rem;
+    color: black;
+    background: red;
+    cursor: pointer;
+    
+}
+
+.btn1:hover{
+    letter-spacing: .2rem;
+}
+
+
+
+
+
+
+
+/* products  ----------------------------------------------------------------*/
+
+
+.item .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    gap: 1.5rem;
+    
+}
+
+.item .box-container .box{
+    padding: 5rem;
+    text-align: center;
+    border: var(--border);
+}
+
+.item .box-container .box img{
+    height: 12rem;
+    
+}
+
+.item .box-container .box h3{
+    color: white;
+    font-size: 2.5rem;
+    padding: 1rem 0;
+}
+
+.item .box-container .box p{
+    color: white;
+    font-size: 1.8rem;
+    padding: 1rem 0;
+}
+
+.item .box-container .box .price{
+    color: white;
+    font-size: 2.5rem;
+    padding: 5rem 0;
+}
+
+
+.item .box-container .box .price span{
+    font-size: 1.5rem;
+    text-decoration: line-through;
+}
+
+.item .box-container .box:hover {
+    background: #123;
+}
+
+.item .box-container .box:hover >*{
+    color: var(--white);
+}
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+::marker {
+    unicode-bidi: isolate;
+    font-variant-numeric: tabular-nums;
+    text-transform: none;
+    text-indent: 0px !important;
+    text-align: start !important;
+    text-align-last: start !important;
+    color: white;
+    
+}
+
+
+.item {
+    position: relative;
+    word-break: break-word;
+    color: grey;
+    overflow: hidden;
+    height: auto;
+    font-size: 1.5rem;
+    text-align-last: left;
+    -o-transition: height .4s linear;
+    transition: height .4s linear;
+}
+
+
+
+.btn{
+    margin-top: var(--bg);
+    display: inline-block;
+    padding: .9rem 3rem;
+    font-size: 2rem;
+    color: black;
+    background: red;
+    cursor: pointer;
+}
+
+.btn:hover{
+    letter-spacing: .2rem;
+}
+
+
+
+/* menu ends ------------------------------------------------------------------*/
