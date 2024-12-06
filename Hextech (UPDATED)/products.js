@@ -34,15 +34,6 @@ document.querySelector("form").addEventListener("submit", function (e) {
         return;
     }
 
-    // Process order (simulate database storage)
-    const order = {
-        name,
-        email,
-        phone,
-        address,
-        postalCode,
-        orderPlacedAt: new Date().toISOString(),
-    };
 
     console.log("Order placed:", order);
 
